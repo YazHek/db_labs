@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd-cpd>
+   <duplication lines="44" tokens="199">
+      <file line="25"
+            path="/Users/admin1/IdeaProjects/db_labs/lab_4/work/src/main/java/ua/lviv/iot/DAO/CloudState.java"/>
+      <file line="24"
+            path="/Users/admin1/IdeaProjects/db_labs/lab_4/work/src/main/java/ua/lviv/iot/DAO/DayOfWeek.java"/>
+      <codefragment><![CDATA[    public void findAll() throws SQLException {
+
+        Connection connection = ConnectionManager.getConnection();
+        try (Statement statement = connection.createStatement()) {
+            try (ResultSet resultSet = statement.executeQuery(FIND_ALL)) {
+
+                print(resultSet);
+
+            }
+        }
+    }
+
+    public void findById(Integer id) throws SQLException {
+
+        Connection connection = ConnectionManager.getConnection();
+        try (PreparedStatement pStat =
+                     connection.prepareStatement(FIND_BY_ID)) {
+
+            pStat.setInt(1, id);
+            try (ResultSet resultSet = pStat.executeQuery()) {
+
+                print(resultSet);
+            }
+        }
+    }
+
+    public void create(Integer id, String name) throws SQLException {
+
+        Connection connection = ConnectionManager.getConnection();
+        try (PreparedStatement pStat = connection.prepareStatement(CREATE)) {
+
+            pStat.setInt(1, id);
+            pStat.setString(2, name);
+
+            pStat.executeUpdate();
+
+        }
+    }
+
+    public void update(Integer id, String name) throws SQLException {
+
+        Connection connection = ConnectionManager.getConnection();
+        try (PreparedStatement pStat = connection.prepareStatement(UPDATE)) {
+            pStat.setString(1, name);]]></codefragment>
+   </duplication>
+   <duplication lines="24" tokens="124">
+      <file line="70"
+            path="/Users/admin1/IdeaProjects/db_labs/lab_4/work/src/main/java/ua/lviv/iot/DAO/WeatherConditions.java"/>
+      <file line="102"
+            path="/Users/admin1/IdeaProjects/db_labs/lab_4/work/src/main/java/ua/lviv/iot/DAO/WeatherConditions.java"/>
+      <codefragment><![CDATA[        try (PreparedStatement pStat = connection.prepareStatement(CREATE)) {
+
+            pStat.setInt(1, id);
+            pStat.setInt(2, temparature);
+            pStat.setInt(3, huminity);
+            pStat.setString(4, windDirection);
+            pStat.setString(5, windSpeed);
+            pStat.setInt(6, waterTemp);
+            pStat.setString(7, date);
+            pStat.setInt(8, hour);
+            pStat.setInt(9, dayOfWeekId);
+            pStat.setInt(10, picturesId);
+            pStat.setInt(11, cloudStateId);
+            pStat.setInt(12, cityId);
+            pStat.setInt(13, cityCountryId);
+            pStat.setInt(14, catastrophyWarningId);
+
+            pStat.executeUpdate();
+
+
+        }
+    }
+
+    public void update(Integer id, Integer temparature, Integer huminity,]]></codefragment>
+   </duplication>
+   <duplication lines="27" tokens="115">
+      <file line="25"
+            path="/Users/admin1/IdeaProjects/db_labs/lab_4/work/src/main/java/ua/lviv/iot/DAO/CloudState.java"/>
+      <file line="26"
+            path="/Users/admin1/IdeaProjects/db_labs/lab_4/work/src/main/java/ua/lviv/iot/DAO/Country.java"/>
+      <file line="24"
+            path="/Users/admin1/IdeaProjects/db_labs/lab_4/work/src/main/java/ua/lviv/iot/DAO/DayOfWeek.java"/>
+      <codefragment><![CDATA[    public void findAll() throws SQLException {
+
+        Connection connection = ConnectionManager.getConnection();
+        try (Statement statement = connection.createStatement()) {
+            try (ResultSet resultSet = statement.executeQuery(FIND_ALL)) {
+
+                print(resultSet);
+
+            }
+        }
+    }
+
+    public void findById(Integer id) throws SQLException {
+
+        Connection connection = ConnectionManager.getConnection();
+        try (PreparedStatement pStat =
+                     connection.prepareStatement(FIND_BY_ID)) {
+
+            pStat.setInt(1, id);
+            try (ResultSet resultSet = pStat.executeQuery()) {
+
+                print(resultSet);
+            }
+        }
+    }
+
+    public void create(Integer id, String name) throws SQLException {]]></codefragment>
+   </duplication>
+   <duplication lines="27" tokens="114">
+      <file line="30"
+            path="/Users/admin1/IdeaProjects/db_labs/lab_4/work/src/main/java/ua/lviv/iot/DAO/CatastrophyWarning.java"/>
+      <file line="34"
+            path="/Users/admin1/IdeaProjects/db_labs/lab_4/work/src/main/java/ua/lviv/iot/DAO/WeatherConditions.java"/>
+      <codefragment><![CDATA[    public void findAll() throws SQLException {
+
+        Connection connection = ConnectionManager.getConnection();
+        try (Statement statement = connection.createStatement()) {
+            try (ResultSet resultSet = statement.executeQuery(FIND_ALL)) {
+
+                print(resultSet);
+
+            }
+        }
+    }
+
+    public void findById(Integer id) throws SQLException {
+
+        Connection connection = ConnectionManager.getConnection();
+        try (PreparedStatement pStat =
+                     connection.prepareStatement(FIND_BY_ID)) {
+
+            pStat.setInt(1, id);
+            try (ResultSet resultSet = pStat.executeQuery()) {
+
+                print(resultSet);
+            }
+        }
+    }
+
+    public void create(Integer id, Integer catastrophyPictureId,]]></codefragment>
+   </duplication>
+   <duplication lines="27" tokens="114">
+      <file line="24"
+            path="/Users/admin1/IdeaProjects/db_labs/lab_4/work/src/main/java/ua/lviv/iot/DAO/City.java"/>
+      <file line="25"
+            path="/Users/admin1/IdeaProjects/db_labs/lab_4/work/src/main/java/ua/lviv/iot/DAO/CloudState.java"/>
+      <file line="26"
+            path="/Users/admin1/IdeaProjects/db_labs/lab_4/work/src/main/java/ua/lviv/iot/DAO/Country.java"/>
+      <file line="24"
+            path="/Users/admin1/IdeaProjects/db_labs/lab_4/work/src/main/java/ua/lviv/iot/DAO/DayOfWeek.java"/>
+      <file line="25"
+            path="/Users/admin1/IdeaProjects/db_labs/lab_4/work/src/main/java/ua/lviv/iot/DAO/Pictures.java"/>
+      <codefragment><![CDATA[    public void findAll() throws SQLException {
+
+        Connection connection = ConnectionManager.getConnection();
+        try (Statement statement = connection.createStatement()) {
+            try (ResultSet resultSet = statement.executeQuery(FIND_ALL)) {
+
+                print(resultSet);
+
+            }
+        }
+    }
+
+    public void findById(Integer id) throws SQLException {
+
+        Connection connection = ConnectionManager.getConnection();
+        try (PreparedStatement pStat =
+                     connection.prepareStatement(FIND_BY_ID)) {
+
+            pStat.setInt(1, id);
+            try (ResultSet resultSet = pStat.executeQuery()) {
+
+                print(resultSet);
+            }
+        }
+    }
+
+    public void create(Integer id, String cityName, Integer countryId)]]></codefragment>
+   </duplication>
+   <duplication lines="27" tokens="113">
+      <file line="30"
+            path="/Users/admin1/IdeaProjects/db_labs/lab_4/work/src/main/java/ua/lviv/iot/DAO/CatastrophyWarning.java"/>
+      <file line="24"
+            path="/Users/admin1/IdeaProjects/db_labs/lab_4/work/src/main/java/ua/lviv/iot/DAO/City.java"/>
+      <file line="25"
+            path="/Users/admin1/IdeaProjects/db_labs/lab_4/work/src/main/java/ua/lviv/iot/DAO/CloudState.java"/>
+      <file line="26"
+            path="/Users/admin1/IdeaProjects/db_labs/lab_4/work/src/main/java/ua/lviv/iot/DAO/Country.java"/>
+      <file line="24"
+            path="/Users/admin1/IdeaProjects/db_labs/lab_4/work/src/main/java/ua/lviv/iot/DAO/DayOfWeek.java"/>
+      <file line="25"
+            path="/Users/admin1/IdeaProjects/db_labs/lab_4/work/src/main/java/ua/lviv/iot/DAO/Pictures.java"/>
+      <file line="34"
+            path="/Users/admin1/IdeaProjects/db_labs/lab_4/work/src/main/java/ua/lviv/iot/DAO/WeatherConditions.java"/>
+      <codefragment><![CDATA[    public void findAll() throws SQLException {
+
+        Connection connection = ConnectionManager.getConnection();
+        try (Statement statement = connection.createStatement()) {
+            try (ResultSet resultSet = statement.executeQuery(FIND_ALL)) {
+
+                print(resultSet);
+
+            }
+        }
+    }
+
+    public void findById(Integer id) throws SQLException {
+
+        Connection connection = ConnectionManager.getConnection();
+        try (PreparedStatement pStat =
+                     connection.prepareStatement(FIND_BY_ID)) {
+
+            pStat.setInt(1, id);
+            try (ResultSet resultSet = pStat.executeQuery()) {
+
+                print(resultSet);
+            }
+        }
+    }
+
+    public void create(Integer id, Integer catastrophyPictureId,]]></codefragment>
+   </duplication>
+   <duplication lines="24" tokens="107">
+      <file line="80"
+            path="/Users/admin1/IdeaProjects/db_labs/lab_4/work/src/main/java/ua/lviv/iot/DAO/Country.java"/>
+      <file line="70"
+            path="/Users/admin1/IdeaProjects/db_labs/lab_4/work/src/main/java/ua/lviv/iot/DAO/DayOfWeek.java"/>
+      <codefragment><![CDATA[            pStat.setInt(3, cityCountryId);
+
+            pStat.executeUpdate();
+
+        }
+    }
+
+    public void delete(Integer id) throws SQLException {
+
+        Connection connection = ConnectionManager.getConnection();
+        try (PreparedStatement pStat = connection.prepareStatement(DELETE)) {
+
+            pStat.setInt(1, id);
+
+            pStat.executeUpdate();
+        }
+    }
+
+    private void print(ResultSet resultSet) throws SQLException {
+        while (resultSet.next()) {
+            System.out.print("{id: " + resultSet.getInt("id"));
+            System.out.print(", name: " + resultSet
+                    .getString("name"));
+            System.out.print(", city_id: " + resultSet]]></codefragment>
+   </duplication>
+   <duplication lines="22" tokens="102">
+      <file line="68"
+            path="/Users/admin1/IdeaProjects/db_labs/lab_4/work/src/main/java/ua/lviv/iot/DAO/CloudState.java"/>
+      <file line="70"
+            path="/Users/admin1/IdeaProjects/db_labs/lab_4/work/src/main/java/ua/lviv/iot/DAO/Pictures.java"/>
+      <codefragment><![CDATA[            pStat.setString(1, name);
+            pStat.setInt(2, id);
+
+            pStat.executeUpdate();
+
+        }
+    }
+
+    public void delete(Integer id) throws SQLException {
+
+        Connection connection = ConnectionManager.getConnection();
+        try (PreparedStatement pStat = connection.prepareStatement(DELETE)) {
+            pStat.setInt(1, id);
+
+            pStat.executeUpdate();
+        }
+    }
+
+    private void print(ResultSet resultSet) throws SQLException {
+        while (resultSet.next()) {
+            System.out.print("{id: " + resultSet.getInt("id"));
+            System.out.print(", name: " + resultSet.getInt("name"));]]></codefragment>
+   </duplication>
+</pmd-cpd>
